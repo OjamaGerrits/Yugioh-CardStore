@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazingly Cool, Based, and Necessary Card Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>    Yo Waddup My Proggas?!? This Site is Finna Gonna Bool n Balance This Prog Series.</h1>
+    <p>This is a really cool store.</p>
+    <!-- Tutorial Button -->
+<button id="tutorialButton">Tutorial</button>
+    <form id="cardForm">
+        <label for="cardRarity">Card Rarity</label>
+        <select id="cardRarity" name="cardRarity">
+            <option value="common">Common</option>
+            <option value="rare">Rare</option>
+            <option value="superRare">Super Rare</option>
+            <option value="ultraRare">Ultra Rare</option>
+            <option value="secretRare">Secret Rare</option>
+            <!-- add more options if needed nigga-->
+        </select>
+
+
+            
+        <label for="cardQuantity">Quantity to Burn:</label>
+        <input type="number" id="cardQuantity" name="cardQuantity" min="1">
+    
+        <label for="currencyValue">Currency Value:</label>
+        <input type="text" id="currencyValue" name="currencyValue" readonly>
+    
+        <button type="submit">Burn Card</button>
+    </form>
+    <div id="currencyTotal">Total Currency: 0</div>
+    <!-- Currency Management -->
+    <div id="currencyManager">
+    <input type="number" id="currencyAmount" placeholder="Enter amount" />
+    <button onclick="modifyCurrency(true)">Add Currency</button>
+    <button onclick="modifyCurrency(false)">Subtract Currency</button>
+    </div>
+    <button onclick="resetCurrency()">Reset Currency to Zero</button>
+
+    <!-- Cards Available for Purchase -->
+    <div id="cardsForSale">
+        <img src="/images/blue-eyes.jpg" alt="Blue-Eyes White Dragon">
+    <!-- Dynamically generate this part with JavaScript based on a list of card objects -->
+    </div>
+
+    <!-- Card Collection -->
+    <div id="cardCollection">
+    <h2>Your Collection</h2>
+    <!-- Dynamically generate this part with JavaScript based on local storage data -->
+    </div>
+    
+    
+    <button onclick="resetCollection()">Reset Collection</button>
+
+    
+
+<!-- Tutorial Modal -->
+<div id="tutorialModal" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h1>Welcome to the Most Based, Most Amazing Card Store!</h1>
+    <p>This brief guide will walk you through the features of our store and how to make the most of your visit.</p>
+
+    <h2>Getting Started</h2>
+    <p><strong>1. Browsing the Collection:</strong> Our card catalog is displayed right on the homepage. You'll see a variety of cards with images, names, and costs clearly listed. Scroll through and take a look at what catches your eye!</p>
+    <p><strong>2. Adding Currency:</strong> Before you can purchase cards, you need currency. Use the "Add Currency" button to increase your store credit. Enter the amount you wish to add and click the button to update your balance. </p>
+    <p><strong>***Currency must be distributed by Game Masters, or burn mechanics.</strong></p>
+    <p><strong>3. Burning Cards:</strong> Got duplicate or unwanted cards? You can burn them for currency! Select the rarity of the card you wish to burn, enter the quantity, and hit "Burn Card." The currency value of the burnt cards will be added to your total balance.</p>
+    <p><strong>***As a measure against currency manipulation, all store access must be witnessed by another player. Burns must be deleted from your collection on YGOPRODEK and verified by another player.</strong></p>
+
+    <h2>Purchasing Cards</h2>
+    <p><strong>1. Buying Your Favorite Cards:</strong> Once you've browsed and have enough currency, you can buy cards. Click "Buy" beneath any card to add it to your collection. If you don't have enough currency, we'll let you know – so you can either add more currency or burn cards to make up the difference.</p>
+    <p><strong>2. Managing Your Collection:</strong> After purchasing, visit "Your Collection" to view all the cards you own. Here, you can review your collection's quantity and details.</p>
+
+    <h2>Tips and Tricks</h2>
+    <ul>
+      <li><strong>Check Daily:</strong> We occasionally add new cards to the catalog, so be sure to check back often!</li>
+      <li><strong>Balance Your Burn:</strong> Burn strategically – rarer cards yield more currency, but they're also harder to find!</li>
+      <li><strong>Plan Your Purchases:</strong> Look out for cards that might complement your existing collection or gameplay strategy.</li>
+    </ul>
+
+    <h2>Need a Reset?</h2>
+    <p>If you make a mistake or want to start over, use the "Reset Currency" or "Reset Collection" buttons to clear your balance or collection, respectively.</p>
+  </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
